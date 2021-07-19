@@ -1,1 +1,1 @@
-# Louvre: Landing Page (task from RSSchool)
+# Repo for RSSchool tasks solutions 
