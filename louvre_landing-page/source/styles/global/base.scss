@@ -1,0 +1,48 @@
+// all styles for tags
+body {
+  font-family: $ff-roboto-regular;
+  font-weight: 400;
+  font-size: $fs-text;
+  line-height: 1.2;   
+}
+
+html {
+  box-sizing: border-box;
+  border: 1px solid red;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style-type: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+button {
+  display: block;
+  border: none;
+  background-color: transparent;
+}
+
+span {
+  display: inline-block;
+}
+
+img {
+  display: block;
+}
+
+figure {
+  margin: 0;
+}

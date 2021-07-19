@@ -1,0 +1,10 @@
+.header {
+  margin: 0;
+  background-color: $bg-dark;
+  color: $color-light;
+
+  .container {
+    justify-content: space-between;
+    align-items: center;
+  }
+}

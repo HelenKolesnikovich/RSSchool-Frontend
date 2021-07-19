@@ -6,6 +6,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const spritesmith = require('gulp.spritesmith');
 const rimraf = require('rimraf');
 const rename = require('gulp-rename');
+const imagemin = require('gulp-imagemin');
 
 // Compile Server
 gulp.task('server', function() {
@@ -63,19 +64,27 @@ gulp.task('copy:fonts', function() {
         .pipe(gulp.dest('build/fonts/'));
 });
 
+// Compile Compressed Images
+gulp.task('compressed:images', function() {
+    return gulp.src('source/images/**/*.*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('build/images'))
+});
+
 // Compile Copy Images
 gulp.task('copy:images', function() {
-    return gulp.src('./source/images/**/*.*')
+    return gulp.src('./source/images/images-compressed/*.*')
         .pipe(gulp.dest('build/images'));
 });
 
 // Compile Copy Fonts and Images
-gulp.task('copy', gulp.parallel('copy:fonts', 'copy:images'));
+gulp.task('copy', gulp.parallel('copy:fonts', 'compressed:images'));
 
 // Watchers
 gulp.task('watch', function() {
-    gulp.watch('source/template/**/*.pug', gulp.series('templates:compile'));
+    gulp.watch('source/templates/**/*.pug', gulp.series('templates:compile'));
     gulp.watch('source/styles/**/*.scss', gulp.series('styles:compile'));
+    gulp.watch('source/images/**/*.*', gulp.series('compressed:images'));
 });
 
 // Default Task

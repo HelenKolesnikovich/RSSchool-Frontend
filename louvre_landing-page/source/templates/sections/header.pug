@@ -1,0 +1,11 @@
+- const links = ['visiting', 'explore', 'video', 'tickets', 'contacts']
+
+header.header 
+  .container.d-flex
+    figure.logo.d-flex
+      img(src='./images/icons/logo.svg' alt="louvre icon")
+      h1.logo__name louvre    
+    nav.navigation.d-flex
+      each link in links 
+        +createLinks(link)(class="navigation__link")
+

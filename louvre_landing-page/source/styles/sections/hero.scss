@@ -1,0 +1,24 @@
+.hero {
+  margin: -1px;
+  padding: 0;
+  padding-top: 114px;
+  padding-bottom: 246px;
+  background-color: $bg-dark;
+  background-image: url("../../images/hero.jpg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: contain;
+  color: $color-light;
+
+  .section-title {
+    span {
+      display: block;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: $xxxl-px;
+    font-size: $fs-heading-medium;
+    letter-spacing: $letter-spacing-small;
+  }
+}

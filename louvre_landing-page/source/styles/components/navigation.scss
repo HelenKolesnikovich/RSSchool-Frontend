@@ -1,0 +1,23 @@
+.navigation {
+    justify-content: space-between;
+
+    &__link {
+        margin-right: $padding-main;
+        color: $color-light;
+        text-transform: capitalize;
+        letter-spacing: $letter-spacing-small;
+        line-height: 1;
+        transition-property: color;
+        transition-duration: $transition-duration;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $color-gold;
+        } 
+    }
+}

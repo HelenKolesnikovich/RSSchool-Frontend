@@ -1,0 +1,17 @@
+// common styles for all page components
+.container {
+  max-width: 1500px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+header,
+section,
+footer {
+  margin: 0;
+  padding: $padding-main 0;
+}
+
+.d-flex {
+  display: flex;
+}
