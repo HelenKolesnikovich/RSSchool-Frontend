@@ -1,0 +1,47 @@
+.picture-explore {
+  background-color: $bg-dark;
+  color: $color-light;
+
+  .container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .section-title {
+    min-width: 650px;
+    margin-bottom: $xxxxl-px;
+  }
+
+  &__description {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 50%;
+    padding-right: $xs-px;
+  }
+
+  &__content {
+    padding-right: $xs-px;
+  }
+
+  &__text {
+    margin-bottom: $sl-px;
+    @include font($size: $fs-text, $transform: none, $color: $color-light);
+    line-height: 1.75;
+
+    &--accent {
+      color: $color-gold;
+      cursor: pointer;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__image {
+    width: 48%;
+    min-width: 550px;
+  }
+}

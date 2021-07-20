@@ -11,8 +11,13 @@
   color: $color-light;
 
   .section-title {
+    margin-bottom: $sl-px;
     span {
       display: block;
+    }
+
+    &::after{ 
+      display: none;
     }
   }
 

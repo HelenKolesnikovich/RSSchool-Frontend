@@ -15,7 +15,7 @@
 
     &__item {
       box-sizing: border-box;
-      max-width: 440px;
+      min-width: 400px;
       width: 30%;      
       margin-right: $margin-medium;
       margin-bottom: $margin-medium;
@@ -30,22 +30,18 @@
     }
 
     &__heading {
+      margin-bottom: $xs-px;
       @include font($family: $ff-forum-regular, $size: $fs-heading-large, $transform: uppercase);
       letter-spacing: $letter-spacing-little;
 
       &::after {
-        content: "";
-        display: block;
-        width: $width-line-tour;
-        height: $line-height-size2;
-        margin: $s-px 0;
-        background-color: $color-red;
+        @include underline($width: $width-line-tour, $height: $line-height-size2, $margin: $xs-px);
       }      
     }
 
     &__subheading {
       @include font($size: $fs-text);
-      margin-bottom: $sl-px;
+      margin-bottom: $xs-px;
     }
 
     &__description {
