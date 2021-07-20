@@ -16,3 +16,12 @@
   top: 50%;
   transform: translateY(-50%);
 }
+
+
+@mixin font($family: $ff-roboto-regular, $weight: 400, $size, $transform: capitalize, $color: $color-black) {
+  font-family: $family;
+  font-weight: $weight;
+  font-size: $size;
+  color: $color;
+  text-transform: $transform;
+}

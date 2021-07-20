@@ -1,0 +1,46 @@
+- 
+  const toursList = [
+    {
+      name: "royal-palace",
+      title: "Royal Palace",
+      option: "360° Virtual Tour",
+      address: "Google Street Panorama View"
+    },
+    {
+      name: "denon-wing",
+      title: "Denon Wing",
+      option: "360° Virtual Tour",
+      address: "Google Street Panorama View"
+    },
+    {
+      name: "colonnade-perrault",
+      title: "Colonnade Perrault",
+      option: "360° Virtual Tour",
+      address: "Google Street Panorama View"
+    },
+    {
+      name: "greek-hall",
+      title: "Greek hall",
+      option: "360° Virtual Tour",
+      address: "Google Street Panorama View"
+    },
+    {
+      name: "mona-lisa",
+      title: "Mona Lisa",
+      option: "360° Virtual Tour",
+      address: "Google Street Panorama View"
+    },
+    {
+      name: "night-palace",
+      title: "Night Palace",
+      option: "360° Virtual Tour",
+      address: "Google Street Panorama View"
+    },
+  ]
+
+section.virtual-tour#visiting
+  .container 
+    h2.section-title.section-title--undeline Virtual tour
+    ul.tours.d-flex
+      each item in toursList
+        +createViewTour(item)

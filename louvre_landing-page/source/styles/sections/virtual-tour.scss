@@ -1,0 +1,55 @@
+.virtual-tour {
+  padding-bottom: 0;
+  background-color: $bg-light;
+  color: $color-black;
+
+  .section-title {
+    color: $color-gold;
+  }
+
+  .tours {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+
+    &__item {
+      box-sizing: border-box;
+      max-width: 440px;
+      width: 30%;      
+      margin-right: $margin-medium;
+      margin-bottom: $margin-medium;
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+
+    &__card {
+      margin-bottom: $sl-px;
+    }
+
+    &__heading {
+      @include font($family: $ff-forum-regular, $size: $fs-heading-large, $transform: uppercase);
+      letter-spacing: $letter-spacing-little;
+
+      &::after {
+        content: "";
+        display: block;
+        width: $width-line-tour;
+        height: $line-height-size2;
+        margin: $s-px 0;
+        background-color: $color-red;
+      }      
+    }
+
+    &__subheading {
+      @include font($size: $fs-text);
+      margin-bottom: $sl-px;
+    }
+
+    &__description {
+      @include font($size: $fs-description);
+    }
+  }
+}

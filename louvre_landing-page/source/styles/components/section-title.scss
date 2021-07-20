@@ -5,4 +5,10 @@
   font-size: $fs-title;
   letter-spacing: $letter-spacing-little;
   text-transform: uppercase;
+
+  &--undeline {
+    margin-bottom: $xxxl-px;
+    padding-bottom: $sl-px;
+    border-bottom: $line-height-size1 solid $color-red;
+  }
 }

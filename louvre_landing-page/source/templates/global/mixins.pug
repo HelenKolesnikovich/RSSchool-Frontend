@@ -1,5 +1,14 @@
 mixin titlePage(title='Title')
-    title= title
+  title= title
 
 mixin createLinks(name)
-    a(href='#'+name)&attributes(attributes)= name
+  a(href='#'+name)&attributes(attributes)= name
+
+mixin createViewTour(tour) 
+  li.tours__item 
+    figure.image.tours__card
+      img(src="./images/"+tour.name+".jpg" alt=tour.name)
+    h3.tours__heading=tour.title 
+    h4.tours__subheading=tour.option 
+    p.tours__description=tour.address
+
