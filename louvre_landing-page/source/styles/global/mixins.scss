@@ -33,5 +33,10 @@
   height: $height;
   margin-top: $margin;
   background-color: $color;
+}
 
+@mixin animation-transition($property, $duration: .5s, $function: easy-out) {
+  transition-property: $property;
+  transition-duration: $duration;
+  transition-timing-function: $function;
 }

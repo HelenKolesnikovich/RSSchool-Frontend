@@ -1,17 +1,22 @@
 .btn {
   padding: $sl-px $xxl-px;
   letter-spacing: $letter-spacing-small;
-  border-radius: $br-btn;
+  border-radius: $btn-br;
   transition-property: background-color;
   transition-duration: $transition-duration;
 
 
   &--red {
     background-color: $color-red;
+  }
 
-    &:hover,
-    &:focus {
-      background-color: $color-gold;
-    }
+  &--white {
+    background-color: $color-light;
+    color: $color-black;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-gold;
   }
 }

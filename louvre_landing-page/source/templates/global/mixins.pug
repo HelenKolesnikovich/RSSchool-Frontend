@@ -12,3 +12,20 @@ mixin createViewTour(tour)
     h4.tours__subheading=tour.option 
     p.tours__description=tour.address
 
+mixin createRadioButton(button)
+  .radio-btn
+    input(type="radio" id=button.id name=button.name value=button.value)
+    label(for=button.id)=button.value
+
+mixin createInputAmount(item) 
+  label(for=item.id)=item.title
+  .input-area 
+    button(type="button") -
+    input(type="number" id=item.id min=item.min max=item.max value=item.init step="1" readonly)
+    button(type="button") +
+
+mixin createInputText(text)
+  .total-message
+    label(for=text.id) total
+    input(type="text" id=text.id minlength="1" maxlength="10" value="$220")
+

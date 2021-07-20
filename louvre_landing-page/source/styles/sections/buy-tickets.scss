@@ -1,0 +1,23 @@
+.buy-tickets {
+  background-color: $bg-dark;
+  color: $color-light;
+
+  &__content {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .image {
+    width: 50%;
+    max-width: 720px;
+  }
+
+  &__form {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 48%;
+    max-width: 650px;
+  }
+}

@@ -1,0 +1,124 @@
+.form {
+  &__section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 40%;
+
+    &:last-child {
+      align-items: flex-end;
+    }
+  }
+
+  &__title {
+    @include font($family: $ff-roboto-medium, $weight: 500, $size: $fs-heading-medium, $color: $color-light);
+  }
+
+  &__radio-group {
+    margin-top: $margin-form1;
+
+    .radio-btn {
+      margin-bottom: $margin-form1;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      input {
+        width: $s-px;
+        height: $s-px;
+        vertical-align: middle;
+        background-color: $bg-dark;
+        appearance: none;
+        @include animation-transition(background-color);
+
+        &:checked {
+          border-radius: 50%;
+          background-color: $color-gold;
+        }
+      }
+
+      label {
+        margin-left: $xs-px;
+        vertical-align: middle;
+        cursor: pointer;
+        @include animation-transition($property: color);
+
+        &:hover,
+        &:focus {
+          color: $color-gold;
+        }
+      }
+    }
+  }
+
+  &__amount-block {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin-top: $xs-px;
+
+    .input-area {
+      @include font($size: $fs-heading-large, $transform: none, $color: $color-light); 
+      @include animation-transition($property: color);
+
+      display: flex;
+      flex-wrap: nowrap;
+      width: 70%;
+      margin-top: $xs-px;
+      margin-bottom: $margin-form2;
+      padding: $xs-px;
+      border: $line-height-size1 solid $color-light;
+      cursor: pointer;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: $color-gold;
+        border-color: $color-gold;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      input {
+        width: 80%;
+        border: none;
+        background-color: transparent;
+        text-align: center;
+        vertical-align: middle;
+
+
+        &:hover,
+        &:focus {
+          outline: none;
+        }
+      }      
+    }
+  }
+
+  .total-message {
+    @include font($size: $fs-heading-medium, $color: $color-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+    margin: $margin-form1 0;
+
+    input {
+      width: 50%;
+      margin-left: $xs-px;
+      border: none;
+      background-color: transparent;
+    }    
+  }
+
+  .btn {
+    padding: $xs-px $m-px;
+    border-radius: $btn-br-small;
+  }
+}

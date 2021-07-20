@@ -1,0 +1,68 @@
+-
+  const radioButtons = [
+    {
+      id: "permanent",
+      name: "ticket-type",
+      value: "Permanent exhibition"
+    },
+    {
+      id: "temporary",
+      name: "ticket-type",
+      value: "Temporary exhibition"
+    },
+    {
+      id: "combined",
+      name: "ticket-type",
+      value: "Combined Admissionn"
+    }
+  ];
+
+-
+  const amountInputs = [
+    {
+      id: "basic",
+      title: "Basic 18+",
+      min: "1",
+      max: "100",
+      init: "1"
+    },
+    {
+      id: "senior",
+      title: "Senior 65+",
+      min: "1",
+      max: "100",
+      init: "1"
+    }
+  ];
+
+-
+  const totalMessage = [
+    {
+      id: "total-sum",
+      label: "total",
+      sign: "$",
+      message: "220"
+    }
+  ]
+
+section.buy-tickets 
+  .container 
+    h2.section-title Buy tickets
+    .buy-tickets__content.d-flex
+      figure.image 
+        img(src="./images/buy-tickets.jpg" alt="picture")
+      form.form.buy-tickets__form.d-flex
+        .form__section
+          h3.form__title Ticket Type
+          .form__radio-group 
+            each button in radioButtons
+              +createRadioButton(button)
+
+        .form__section
+          h3.form__title Amount
+          .form__amount-block.d-flex
+            each block in amountInputs
+              +createInputAmount(block)
+            +createInputText(totalMessage)
+
+            button.btn.btn--white(type="submit") Buy Now
