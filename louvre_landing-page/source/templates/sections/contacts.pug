@@ -1,0 +1,30 @@
+-
+  const contacts = [
+    {
+      name: "address:",
+      link: "75001 Paris, France"
+    },
+    {
+      name: "phone:",
+      href: "tel:+123456789",
+      link: "+33(0) 1 40 20 50 50"
+    },
+    {
+      name: "mail:",
+      href: "mailto:info@louvre.fr",
+      link: "info@louvre.fr"
+    }
+  ];
+
+section.contacts#contacts
+  .container 
+    h2.section-title Contacts
+    .contacts__content.d-flex
+      .contacts__info
+        h3.section-heading.contacts__heading Palais Royal <span>Musee du Louvre</span>
+        ul.list.contacts__list 
+          each item in contacts
+            +createListItems(item)
+      figure.image.contacts__map
+        img(src="./images/contacts-map.jpg")
+      

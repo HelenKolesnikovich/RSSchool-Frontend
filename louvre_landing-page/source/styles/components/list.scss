@@ -1,0 +1,17 @@
+.list {
+  width: 100%;
+}
+
+.item {
+  margin-bottom: $s-px;
+
+  span {
+    margin-left: $xs-px;
+    color: $color-black;
+  }
+
+  .link {
+    margin-left: $xs-px;
+    color: $color-black;
+  }
+}

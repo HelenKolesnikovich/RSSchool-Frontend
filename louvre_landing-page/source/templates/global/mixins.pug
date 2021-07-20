@@ -4,6 +4,13 @@ mixin titlePage(title='Title')
 mixin createLinks(name)
   a(href='#'+name)&attributes(attributes)= name
 
+mixin createListItems(item)
+  li.item=item.name
+    if (item.href)
+      a.link(href=item.href)=item.link
+    else 
+      span(class=item.linkClass)=item.link
+
 mixin createViewTour(tour) 
   li.tours__item 
     figure.image.tours__card

@@ -11,6 +11,10 @@
   }
 }
 
+.section-heading {
+  @include font($family: $ff-roboto-medium, $size: $fs-heading-medium, $weight: 500);
+}
+
 .section-paragraph {
   @include font($size: $fs-text, $transform: none, $color: $color-light);
   line-height: 1.75;

@@ -1,0 +1,31 @@
+.contacts {
+  background-color: $bg-light;
+  color: $color-black;
+
+  .section-title {
+    color: $color-gold;
+  }
+
+  &__content {
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__info {
+    width: 30%;
+  }
+
+  &__heading {
+    margin-bottom: $margin-form2;
+
+    span {
+      display: block;
+    }
+  }
+
+  .image {
+    width: 65%;
+    max-width: 960px;
+    min-width: 600px;
+  }
+}
