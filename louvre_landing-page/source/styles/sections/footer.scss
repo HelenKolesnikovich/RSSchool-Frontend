@@ -1,0 +1,51 @@
+.footer {
+  background-color: $bg-dark;
+  color: $color-light;
+
+  .container {
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .logo__name {
+    margin-right: 10%;
+  }
+
+  &__nav {
+    flex-wrap: wrap;
+    max-width: 350px;
+    margin-right: 20%;
+
+    a {
+      @include animation-transition($property: color);
+      width: 20%;
+      margin-right: 40%;
+      margin-bottom: $xs-px;
+      color: $color-light;
+      text-transform: capitalize;
+      cursor: pointer;
+
+      &:nth-child(2n) {
+        align-self: flex-start;
+        margin-right: 0;
+      }
+
+      &:hover,
+      &:focus {
+        color: $color-gold;
+      }
+    }
+  }
+
+  &__social {
+    align-self: flex-end;
+
+    .btn__social {
+      margin-right: $sl-px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

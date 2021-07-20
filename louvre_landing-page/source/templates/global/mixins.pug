@@ -4,6 +4,11 @@ mixin titlePage(title='Title')
 mixin createLinks(name)
   a(href='#'+name)&attributes(attributes)= name
 
+
+mixin createSocialButton(btn)
+  a.btn__social.btn--circle(href=btn.link title=btn.name)
+    i(class=btn.class)
+
 mixin createListItems(item)
   li.item=item.name
     if (item.href)

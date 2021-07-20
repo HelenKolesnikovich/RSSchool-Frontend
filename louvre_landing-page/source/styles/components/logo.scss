@@ -6,12 +6,12 @@
     height: 34px;
     margin-right: $s-px;
   }
+}
 
-  .logo__name {
-    font-family: $ff-forum-regular;
-    font-weight: 400;
-    font-size: $fs-heading-medium;
-    letter-spacing: $letter-spacing-little;
-    text-transform: uppercase;
-  }
+.logo__name {
+  font-family: $ff-forum-regular;
+  font-weight: 400;
+  font-size: $fs-heading-medium;
+  letter-spacing: $letter-spacing-little;
+  text-transform: uppercase;
 }

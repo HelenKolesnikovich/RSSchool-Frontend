@@ -1,0 +1,39 @@
+- const footerLinks = ['welcome', 'visiting', 'explore', 'video', 'tickets', 'contacts'];
+-
+  const socialsLinks = [
+    {
+      name: "Youtube",
+      href: "https://www.youtube.com",
+      class: "fa fa-youtube-play"
+    },
+    {
+      name: "Instagram",
+      href: "https://www.instagram.com",
+      class: "fa fa-instagram"
+    },
+    {
+      name: "Facebook",
+      href: "https://www.facebook.com",
+      class: "fa fa-facebook-f"
+    },
+    {
+      name: "Twitter",
+      href: "https://twitter.com",
+      class: "fa fa-twitter"
+    },
+    {
+      name: "Pinterest",
+      href: "https://www.pinterest.com",
+      class: "fa fa-pinterest"
+    }
+  ]
+
+footer.footer 
+  .container.d-flex
+    h3.logo__name louvre
+    nav.footer__nav.d-flex
+      each link in footerLinks
+        +createLinks(link)
+    nav.footer__social
+      each social in socialsLinks 
+        +createSocialButton(social)

@@ -15,8 +15,31 @@
     color: $color-black;
   }
 
+  &--circle {
+    border-radius: $btn-br-circle;
+  }
+
   &:hover,
   &:focus {
     background-color: $color-gold;
+  }
+}
+
+.btn__social {
+  @include animation-transition($property: color);
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  border-radius: $btn-br-circle;
+  border: $btn-border-width-circle solid $color-light-grey;
+  text-align: center;
+  vertical-align: middle;
+  font-size: $sl-px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: $color-gold;
+    color: $color-gold;
   }
 }
