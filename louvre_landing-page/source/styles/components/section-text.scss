@@ -10,3 +10,8 @@
     @include underline;
   }
 }
+
+.section-paragraph {
+  @include font($size: $fs-text, $transform: none, $color: $color-light);
+  line-height: 1.75;
+}
